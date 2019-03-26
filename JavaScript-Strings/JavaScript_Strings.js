@@ -26,7 +26,8 @@ console.log(string_to_array('Robin,Singh'));
 /* 4. Scrieti o functie care transforma un string in forma abreviata: */
 function abbrev_name(strRS) {
     var secondName = strRS.slice(0,7) + '.';
-    return secondName; 
+    return secondName;
+}     
 console.log(abbrev_name('Robin Singh'));
 
 
