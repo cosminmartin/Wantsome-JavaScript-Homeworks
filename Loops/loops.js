@@ -4,7 +4,7 @@ par sau impar si va raporta acest lucru in consola. (exemplu: '2 este numar par'
 Scrieti functia in doua variante: while si for
 */
 
-(function parImpar (x) {
+(function parImpar () {
     for (var x = 0; x <= 20; x++) {
         if (x === 0) {
                 console.log(x +  " este numar par");
@@ -20,7 +20,7 @@ Scrieti functia in doua variante: while si for
 })();
 
 
-(function parImpar (x) {
+(function parImpar () {
         var x = 0;
         while (x < 20) {
            x++;
@@ -44,7 +44,7 @@ curent cu 9 si se va afisa rezultatul (exemplu:'3*9=27').
 Scrieti functia in doua variante: while si for
 */
 
-(function multiplyBy9(x) {
+(function multiplyBy9() {
         for (var x = 0; x <= 10; x++) {
           console.log(x*9);
         }
@@ -52,7 +52,7 @@ Scrieti functia in doua variante: while si for
 })();
       
       
-(function multiplyBy9(x) {
+(function multiplyBy9() {
         var x = 0;
         while (x < 10) {
           x++;
