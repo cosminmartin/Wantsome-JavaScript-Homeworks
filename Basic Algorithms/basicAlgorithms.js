@@ -27,26 +27,20 @@
 // Scrieti o functie care sa schimbe literele unui string daca sunt uppercase cu lowercase si invers
 // ex: myFunction("xxXyYzZZ") sa printeze "XXxYyZzz"
 
-
-
-/* function lowerUpper(text) {
-    var text = 'xxXyYzZZ';
-    var lower = text.toLowerCase(0);
-    return lower;
+function lowerUpper(string) {
+	var textToChange = "";
+    for(var i = 0; i < string.length; i++) {
+      var char = string[i];
+      if(char === char.toUpperCase()) {
+        textToChange += char.toLowerCase();
+      }
+      else {
+        textToChange += char.toUpperCase();
+      }           
+    }
+    return textToChange;
 }
-
-
-function isLowerCase(lowerCharacter)    
-{    
-    return (lowerCharacter >= 'a') && (lowerCharacter <= 'z');
-}
-
-function isUpperCase(upperCharacter)    
-{    
-    return (upperCharacter >= 'A') && (upperCharacter <= 'Z');
-}
-*/
-
+ 
 
 //Ex4
 // Scrieti o functie care sa concateneze un string de cate ori ii zicem
@@ -64,14 +58,14 @@ function isUpperCase(upperCharacter)
    
     function verifyPalindrome(textToVerify) {
         var splitText = textToVerify.split('');
-				var splitTextReversed = splitText.reverse();
-				var joinReversedText = splitTextReversed.join('');
-				   if (textToVerify === joinReversedText) {
-					    return textToVerify + ' is a palindrome';
-					 }
-					 else {
-							return textToVerify + ' is not a palindrome';
-					 }
+		var splitTextReversed = splitText.reverse();
+		var joinReversedText = splitTextReversed.join('');
+			if (textToVerify === joinReversedText) {
+				return textToVerify + ' is a palindrome';
+			}
+			else {
+				return textToVerify + ' is not a palindrome';
+			}
     }   
 
 
