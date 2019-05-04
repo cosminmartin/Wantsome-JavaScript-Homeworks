@@ -1,0 +1,17 @@
+form {
+    background-color: beige;
+    width: 400px;
+    margin: 20px;
+    border: 1px solid black;
+    padding: 20px;
+}
+
+input {
+    background-color: gray;
+  }
+
+ #next {
+     background-color: rgb(51, 48, 48);
+     width: 400px;
+     padding: 10px 20px;
+ } 
