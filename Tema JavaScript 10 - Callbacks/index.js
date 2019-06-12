@@ -16,14 +16,12 @@ form.onsubmit = function(submitEvent) {
 };
 
 function resultsOfBooks(response) {
-  console.log(response);
   //schimbati argumentele in functia de mai jos astfel incat sa primeasca response si o functie de tip care sa fie apelata ca si callback - displayBookParagraph
   displayDetailsWithCallback(response, displayBookParagraph);
 }
 
 function displayDetailsWithCallback(books, callback) {
   const booksArray = books.items.slice(0, 4);
-  console.log(booksArray);
   for (let i = 0; i < booksArray.length; i++) {
     callback(booksArray[i].volumeInfo.title);
     callback('Publisher: ' + booksArray[i].volumeInfo.publisher);
@@ -38,7 +36,6 @@ function displayDetailsWithCallback(books, callback) {
 }
 
 function displayBookParagraph(book) {
-  console.log(book);
   let paragraphBook = document.createElement('p');
   paragraphBook.textContent = book;
   document.querySelector('.custom-input').appendChild(paragraphBook);
@@ -46,18 +43,3 @@ function displayBookParagraph(book) {
   // inserati intr-un paragraph textul format
 }
 
-// BONUS
-// Sa se afiseze pe pagina detalii precum title, publisher, publishDate, pages, language si thumbnail-ul(imaginea) cartii
-
-// function addBooksToPage()  
-//details added to displayDetailsWithCallback()
-
-//Bonus 2 - afisati si descrierea - description - iar daca descrierea e mai lunga de 15 cuvinte, adaugati "..."
-//exemplu : Describes the COMPASS model for working with preschool and elementary...
-// const splitedDescription = description => {
-//   let arr = description.split(' ');
-//   if (arr.length > 15) {
-//     let resume = arr.splice(0, 15);
-//     return resume.join(' ') + '...';
-//   }
-// };
